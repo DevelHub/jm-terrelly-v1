@@ -1,16 +1,16 @@
 version: 0.1
 environment_variables:
     plaintext:
-        S3_BUCKET: "1808-project2-bucket-mubaraq"
+        S3_BUCKET: "jm-terrelly-v1"
 phases:
     install:
         commands:
             - echo Installing source NPM dependencies...
-            - cd project2 && cd ecommerce_test && npm install
+            - npm install
     build:
         commands:
             - echo Build started on `date`
-            - cd project2 && cd ecommerce_test && npm run build
+            - npm run build
     post_build:
         commands:
             - echo "$CODEBUILD_BUILD_SUCCEEDING"
@@ -23,5 +23,5 @@ phases:
 artifacts:
     files:
         - '**/*'
-    base-directory: 'project2/ecommerce_test/build*'
+    base-directory: 'build*'
     discard-paths: yes
