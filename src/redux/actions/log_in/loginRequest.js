@@ -1,6 +1,6 @@
 
 
-//ec2 endpoint : http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001
+//ec2 endpoint : http://71.146.116.214:3001
 import { authHeader } from './authHeader';
 
 export const logInRequest = {
@@ -23,7 +23,7 @@ function login(username, password) {
     };
 
     // return fetch(`http://localhost:8000/credential/login`, requestOptions)
-    return fetch(`http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001/credential/login`, requestOptions)
+    return fetch(`http://71.146.116.214:3001/credential/login`, requestOptions)
         .then(user => user.json())
         .then(user => {
             localStorage.setItem('user', JSON.stringify(user));
@@ -53,7 +53,7 @@ function getAll() {
         headers: authHeader()
     };
 
-    return fetch(`http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001/customer`, requestOptions)
+    return fetch(`http://71.146.116.214:3001/customer`, requestOptions)
     .then(user => user.json())
         .then(user => {
             localStorage.setItem('user', JSON.stringify(user));
@@ -78,7 +78,7 @@ function register(user) {
     
     // console.log("got in register");
 
-     return fetch(`http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001/credential`, requestOptions)
+     return fetch(`http://71.146.116.214:3001/credential`, requestOptions)
      
      
 }
@@ -93,7 +93,7 @@ function registerCustom(user){
         body: JSON.stringify(user)
     };
    
-    return fetch(`http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001/customer`, requestOptions);
+    return fetch(`http://71.146.116.214:3001/customer`, requestOptions);
 
 }
 

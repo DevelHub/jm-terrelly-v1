@@ -45,7 +45,7 @@ handleSubscribe(event){
   console.log(user.timeFrame);
  
 
-  fetch(`http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001/subscription/add`, {
+  fetch(`http://71.146.116.214:3001/subscription/add`, {
     headers: {
       "Content-Type": "application/json"
     },

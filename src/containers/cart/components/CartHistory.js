@@ -37,7 +37,7 @@ else {
 
 function getData() {
     // console.log(`customer id : ${customerId[0].customer.id}`);
-    fetch(`http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001/purchase/${userId}`, {
+    fetch(`http://71.146.116.214:3001/purchase/${userId}`, {
       // fetch('http://localhost:3001/cart/get/2',{
       headers: {
         "Content-Type": "application/json"

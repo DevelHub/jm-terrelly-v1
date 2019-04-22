@@ -58,7 +58,7 @@ console.log(year);
     console.log(`customer id = ${this.state.cart.customerId}`);
     setTimeout(() => {
       
-    fetch(`http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001/cart/get/${this.state.cart.customerId}`, {
+    fetch(`http://71.146.116.214:3001/cart/get/${this.state.cart.customerId}`, {
       // fetch('http://localhost:3001/cart/get/2',{
       headers: {
         "Content-Type": "application/json"
@@ -97,7 +97,7 @@ console.log(year);
       cart.quantity = this.state.data[i].quantity;
       // cart.purchaseDate = '2018-09-25';
       
-      fetch(`http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001/purchase`, {
+      fetch(`http://71.146.116.214:3001/purchase`, {
         headers: {
           "Content-Type": "application/json"
         },
@@ -111,7 +111,7 @@ console.log(year);
 
     console.log(`this is customer id ${this.state.cart.customerId}`);
     //deleting current cart
-    fetch(`http://ec2-54-200-103-68.us-west-2.compute.amazonaws.com:3001/cart/customer/${this.state.cart.customerId}`, {
+    fetch(`http://71.146.116.214:3001/cart/customer/${this.state.cart.customerId}`, {
       headers: {
         "Content-Type": "application/json"
       },
